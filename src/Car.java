@@ -25,7 +25,12 @@ public class Car extends Vehicle {
     }
 
     public boolean dropOffPassengers(int numOut){
-
+        if(getPassengers()>numOut){
+            setPassengers(getPassengers()-numOut);
+            return true;
+        }else{
+            return false;
+        }
     }
 
 }

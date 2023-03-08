@@ -57,6 +57,29 @@ public class VehicleRunner {
         // ------------ LAB PART 3 ---------------
         // ----- instructions in lab sheet -------
 
+        System.out.println("--- Testing method on a Car object ---");
+        Car testCar1 = new Car("KXN73F", 8.50, 5, true);
+        System.out.println(testCar1.getPassengers());
+        System.out.println("-----------");
+        boolean success = testCar1.dropOffPassengers(3);
+        System.out.println(success);
+        System.out.println(testCar1.getPassengers());
+        System.out.println("-----------");
+        success = testCar1.dropOffPassengers(3);
+        System.out.println(success);
+        System.out.println(testCar1.getPassengers());
+        System.out.println("--- Testing method on a Taxi object ---");
+        Taxi testTaxi1 = new Taxi("JMD645", 10.35, 3, false, 5.0);
+        System.out.println(testTaxi1.getPassengers());
+        System.out.println("-----------");
+        success = testTaxi1.dropOffPassengers(3);
+        System.out.println(success);
+        System.out.println(testTaxi1.getPassengers());
+        System.out.println("-----------");
+        success = testTaxi1.dropOffPassengers(2);
+        System.out.println(success);
+        System.out.println(testTaxi1.getPassengers());
+        System.out.println("-----------");
 
 
     }
