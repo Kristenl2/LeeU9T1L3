@@ -28,4 +28,6 @@ public class Vehicle {
     public void setPassengers(int num){
         passengers = num;
     }
+
+    public void setTollFee(double fee){tollFee = fee;}
 }

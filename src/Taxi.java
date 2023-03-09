@@ -15,4 +15,18 @@ public class Taxi extends Car{
         System.out.println("Discount applied? " + isDiscountApplied());
         System.out.println("Total fare collected: " + fareCollected);
     }
+
+    public void pickupRiders(int numRiders, double farePerRider){
+        setPassengers(getPassengers()+numRiders);
+        fareCollected+=numRiders * farePerRider;
+        if(getPassengers()>=4&&!(isDiscountApplied())){
+            setTollFee(getTollFee()*0.5);
+            setDiscountApplied(true);
+        }
+    }
+
+    public double getFareCollected(){
+        return fareCollected;
+    }
+
 }

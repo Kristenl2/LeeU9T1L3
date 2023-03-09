@@ -24,13 +24,23 @@ public class Car extends Vehicle {
         return discountApplied;
     }
 
-    public boolean dropOffPassengers(int numOut){
-        if(getPassengers()>numOut){
-            setPassengers(getPassengers()-numOut);
+    public void setDiscountApplied(boolean discount){
+        discountApplied = discount;
+    }
+
+    public boolean dropOffPassengers(int numOut) {
+        if (getPassengers() > numOut) {
+            setPassengers(getPassengers() - numOut);
             return true;
-        }else{
+        } else {
             return false;
         }
     }
+        public void applyDiscount(){
+            if(!(discountApplied)&&electric){
+                setTollFee(getTollFee()*0.5);
+                discountApplied = true;
+            }
+        }
+    }
 
-}
